@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: core-discovery
+
+server:
+  port: 8761
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    hostname: sesac
+logging:
+  level:
+    '[com.netflix.eureka]': 'OFF'
+    '[com.netflix.discovery]': 'OFF'
