@@ -1,0 +1,9 @@
+[submodule "service-account"]
+	path = service-account
+	url = git@github.com:cloud2scape/service-account.git
+[submodule "service-product"]
+	path = service-product
+	url = git@github.com:cloud2scape/service-product.git
+[submodule "service-order"]
+	path = service-order
+	url = git@github.com:cloud2scape/service-order.git
