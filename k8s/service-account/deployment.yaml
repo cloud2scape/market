@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-account
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service-account
+  template:
+    metadata:
+      labels:
+        app: service-account
+    spec:
+      containers:
+        - name: service-account
+          image: ghcr.io/cloud2scape/service-account:latest
+          ports:
+            - containerPort: 8661
