@@ -1,0 +1,37 @@
+services:
+  service-account:
+    container_name: service-account
+    build:
+      context: ./service-account
+      dockerfile: Dockerfile
+    image: service-account:latest
+    ports:
+      - "8661:8661"
+
+    networks:
+      - default
+
+  service-order:
+    container_name: service-order
+    build:
+      context: ./service-order
+      dockerfile: Dockerfile
+    image: service-order:latest
+    ports:
+      - "8662:8662"
+    networks:
+      - default
+
+  service-product:
+    container_name: service-product
+    build:
+      context: ./service-product
+      dockerfile: Dockerfile
+    image: service-product:latest
+    ports:
+      - "8663:8663"
+    networks:
+      - default
+
+networks:
+  default:
