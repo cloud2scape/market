@@ -1,4 +1,4 @@
-package org.sesac.market.controller;
+package org.sesac.market.adapter.in;
 
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
