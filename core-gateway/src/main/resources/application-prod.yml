@@ -1,0 +1,11 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+      on-cloud-platform: kubernetes
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    enabled: false
