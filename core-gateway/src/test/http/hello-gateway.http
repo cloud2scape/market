@@ -1,0 +1,8 @@
+### CALL service-account
+GET http://localhost:8080/account/
+
+### CALL service-order
+GET http://localhost:8080/order/
+
+### CALL service-product
+GET http://localhost:8080/product/
