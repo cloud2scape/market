@@ -10,22 +10,25 @@ spring:
             predicates:
               - Path=/account/**
             filters:
-              - RemoveRequestHeader=Cookie
               - RewritePath=/account/(?<segment>.*), /$\{segment}
           - id: service-order
             uri: lb://service-order
             predicates:
               - Path=/order/**
             filters:
-              - RemoveRequestHeader=Cookie
               - RewritePath=/order/(?<segment>.*), /$\{segment}
           - id: service-product
             uri: lb://service-product
             predicates:
               - Path=/product/**
             filters:
-              - RemoveRequestHeader=Cookie
               - RewritePath=/product/(?<segment>.*), /$\{segment}
+          - id: core-auth
+            uri: lb://core-auth
+            predicates:
+              - Path=/auth/**
+            filters:
+              - RewritePath=/auth/(?<segment>.*), /$\{segment}
 
 server:
   port: 8080
