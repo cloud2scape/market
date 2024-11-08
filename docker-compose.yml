@@ -1,35 +1,41 @@
 services:
-  service-account:
-    container_name: service-account
-    build:
-      context: ./service-account
-      dockerfile: Dockerfile
-    image: service-account:latest
+  infra-redis:
+    image: redis:latest
+    container_name: infra-redis
+    environment:
+      - REDIS_PASSWORD=root
     ports:
-      - "8661:8661"
-
+      - "6379:6379"
     networks:
       - default
 
-  service-order:
-    container_name: service-order
-    build:
-      context: ./service-order
-      dockerfile: Dockerfile
-    image: service-order:latest
+  account-db:
+    image: mysql:latest
+    environment:
+      - MYSQL_DATABASE=account
+      - MYSQL_ROOT_PASSWORD=root
     ports:
-      - "8662:8662"
+      - "3316:3306"
     networks:
       - default
 
-  service-product:
-    container_name: service-product
-    build:
-      context: ./service-product
-      dockerfile: Dockerfile
-    image: service-product:latest
+  order-db:
+    image: mysql:latest
+    environment:
+      - MYSQL_DATABASE=order
+      - MYSQL_ROOT_PASSWORD=root
     ports:
-      - "8663:8663"
+      - "3317:3306"
+    networks:
+      - default
+
+  product-db:
+    image: mysql:latest
+    environment:
+      - MYSQL_DATABASE=product
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - "3318:3306"
     networks:
       - default
 
