@@ -1,9 +1,20 @@
+[submodule "core-discovery"]
+	path = core-discovery
+	url = git@github.com:cloud2scape/core-discovery.git
+    branch = main
+[submodule "core-gateway"]
+	path = core-gateway
+	url = git@github.com:cloud2scape/core-gateway.git
+	branch = main
 [submodule "service-account"]
 	path = service-account
 	url = git@github.com:cloud2scape/service-account.git
+	branch = develop
 [submodule "service-product"]
 	path = service-product
 	url = git@github.com:cloud2scape/service-product.git
+	branch = develop
 [submodule "service-order"]
 	path = service-order
 	url = git@github.com:cloud2scape/service-order.git
+	branch = develop
