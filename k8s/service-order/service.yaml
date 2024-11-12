@@ -8,6 +8,6 @@ spec:
     app: service-order
   ports:
   - protocol: TCP
-    port: 8662
-    targetPort: 8662
+    port: 80
+    targetPort: 80
     nodePort: 32002

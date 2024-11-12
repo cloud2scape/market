@@ -12,8 +12,13 @@ spec:
       labels:
         app: service-order
     spec:
+      serviceAccountName: spring-cloud-kubernetes
       containers:
         - name: service-order
           image: ghcr.io/cloud2scape/service-order:latest
+          #image: docker.io/laigasus/service-order:latest
           ports:
-            - containerPort: 8662
+            - containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: config-order
