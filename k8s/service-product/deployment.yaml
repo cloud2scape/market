@@ -12,8 +12,13 @@ spec:
       labels:
         app: service-product
     spec:
+      serviceAccountName: spring-cloud-kubernetes
       containers:
         - name: service-product
           image: ghcr.io/cloud2scape/service-product:latest
+          #image: docker.io/laigasus/service-product:latest
           ports:
-            - containerPort: 8663
+            - containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: config-product
