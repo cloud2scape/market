@@ -8,6 +8,6 @@ spec:
     app: service-account
   ports:
   - protocol: TCP
-    port: 8661
-    targetPort: 8661
+    port: 80
+    targetPort: 80
     nodePort: 32001

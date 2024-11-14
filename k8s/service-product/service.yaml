@@ -8,6 +8,6 @@ spec:
     app: service-product
   ports:
   - protocol: TCP
-    port: 8663
-    targetPort: 8663
+    port: 80
+    targetPort: 80
     nodePort: 32003
