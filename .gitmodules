@@ -5,7 +5,7 @@
 [submodule "core-gateway"]
 	path = core-gateway
 	url = git@github.com:cloud2scape/core-gateway.git
-	branch = main
+	branch = develop
 [submodule "service-account"]
 	path = service-account
 	url = git@github.com:cloud2scape/service-account.git
@@ -17,4 +17,8 @@
 [submodule "service-order"]
 	path = service-order
 	url = git@github.com:cloud2scape/service-order.git
+	branch = develop
+[submodule "batch-order"]
+	path = batch-order
+	url = git@github.com:cloud2scape/batch-order.git
 	branch = develop
